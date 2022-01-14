@@ -1,12 +1,16 @@
-function deretKaskus(n){
-    const nama = Kas
-    const nama = Kus
-    for (let i=3; i < n; i++)
-    kaskus === deretKaskus[i];
-      return console.log(deretKaskus);
-
+function deretKaskus(n) {
+  let hasil = [];
+  for (let i=3; i <= n*3; i+=3) {
+    if(i % 6 == 0 && i % 5 == 0)hasil.push('KASKUS')
+     else if(i % 5 == 0) hasil.push('KAS')
+     else if(i % 6 == 0) hasil.push('KUS')
+     else {
+      hasil.push(i)
+    }
+    
+  }
+  return hasil
 }
+  console.log(deretKaskus(10))
 
-
-    console.log(deretKaskus(10))
 
