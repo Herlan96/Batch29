@@ -11,4 +11,6 @@ function stringManipulation(word) {
 
 stringManipulation('ayam')
 stringManipulation('bebek')
-
+stringManipulation('burung')
+stringManipulation('badak')
+stringManipulation('banteng','babi')
