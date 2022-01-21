@@ -5,7 +5,7 @@ function romawi(nomor){
   
     var hasil = '';
   
-    for(var i = 0; i < number.length; i++){
+    for(var i = 0; i < number.length; i++) {
       while(number[i] <= nomor) {
         hasil += romawi[i];
         nomor -= number[i];
