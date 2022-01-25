@@ -14,25 +14,25 @@ function matrix(n) {
     let endCol = n - 1;
     
     while (startCol <= endCol && startRow <= endRow) {
-      //Top - SR
+      //right - SR
       for (let i = startCol; i <= endCol; i++) {
         arr[startRow][i] = counter++;
       }
       startRow++;
       
-      //Right - EC
+      //bottom - EC
       for (let i = startRow; i <= endRow; i++) {
         arr[i][endCol] = counter++;
       } 
       endCol--;
       
-      //Bottom - ER
+      //left - ER
       for (let i = endCol; i >= startCol; i--) {
         arr[endRow][i] = counter++;
       }
       endRow--;
       
-      //left - SC
+      //top - SC
       for (let i = endRow; i >= startRow; i--) {
         arr[i][startCol] = counter++;
       }
