@@ -25,31 +25,44 @@ switch (param1[2]) {
 
     case 'add':
 
-        let title = param1.slice(3).join(' ')
-        console.log(title)
-        let newData = {
-            title: "saya akan memasak",
+        const title = param1.slice(3).join(" ")
+        const todo = {
+            title: title,
             complete: false,
             tags: []
         }
+        data.push(todo)
+        fs.writeFileSync('data.json', JSON.stringify(data, null, 3), 'utf-8')
+        break;
 
-
-        data.push(newData)
-        fs.writeFileSync('data3.json', JSON.stringify(data), 'utf-8')
-
-
+    // node todo.js deleted
     case 'deleted':
+        data.push(todo)
+        fs.writeFileSync('data.json', JSON.stringify(data, null, 3), 'utf-8')
+        break;
 
-        let deleted = param1[3]- 1
-        data.splice(deleted, 1)
-        console.log(data)
+    // node todo.js complete
+    case 'complete':
+        data[id], complete = true
+        fs.writeFileSync('data.json', JSON.stringify(data, null, 3), 'utf-8')
+        break;
+
+    // node todo.js list:outstanding asc
+    case 'list:outstanding':
+        console.log('pekerajaan yang belum selesai')
+        if (param1[3] == 'asc') {
+            for (let i = 0; i < data.length; i++)
+                if (!data[i].complete)
+                    console.log(`${index + 1}. [${item.complete ? 'x' : ' '}] ${item.title}`)
+        } else {
+            for (let i = data.length - 1; i >= 0; i--)
+                if (!data[i].complete)
+                    console.log(`${index + 1}. [${item.complete ? 'x' : ' '}] ${item.title}`)
+
 
 
         break;
-
-    
-
-
+        }
 
     default:
         console.log('>>> JS TODO <<<')

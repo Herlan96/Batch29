@@ -1,4 +1,4 @@
-// const raedline = require('readline')
+// const readline = require('readline')
 import readline from 'readline'
 import fs from 'fs'
 
