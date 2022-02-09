@@ -1,4 +1,4 @@
-SQLite3 university.db
+-- SQLite3 university.db
 create table jurusan(
 kodejurusan varchar primary key not null, 
 namajurusan varchar not null
