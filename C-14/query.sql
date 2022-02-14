@@ -1,4 +1,4 @@
--- SQLite3 university.db
+--SQLite3 university.db
 create table jurusan(
 kodejurusan varchar primary key not null, 
 namajurusan varchar not null
@@ -29,7 +29,7 @@ nama varchar,
 sks integer
 );
 
-insert into matakuliah(kodematkul, nama, sks) values ('m1', 'rubi', '3');
+insert into matakuliah(kodematkul, nama, sks) values ('m1', 'teknik komunikasi data', '3');
 
 -- foreign key ada key yang ada di setiap tabel
 
