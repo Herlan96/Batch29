@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Belajar HTML</title>
+    <style>
+        #judul {
+            color:green;
+        }
+        .kuning {
+            color:yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TODO</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Daftar Kerjaan</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((item, index) => { %>
+            <tr>
+                <td><%= index + 1 %></td>
+                <td><%= item.task %></td>
+                <td><%= item.complete %></td>
+                <td>
+                    <a href="/edit/<%= index %>">Edit</a>
+                    <a href="/delete/<%= index %>">Delete</a>
+                </td>
+            </tr>
+            <% })  %>
+        </tbody>
+    </table>
+    <a href="/add">Tambah</a>
+</body>
+
+</html>
+
+            
