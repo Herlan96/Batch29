@@ -1,0 +1,34 @@
+[
+   {
+      "task": "masak",
+      "complete": false
+   },
+   {
+      "task": "masak",
+      "complete": true
+   },
+   {
+      "task": "ngepel",
+      "complete": false
+   },
+   {
+      "task": "belajar css",
+      "complete": false
+   },
+   {
+      "task": "ngepel",
+      "complete": true
+   },
+   {
+      "task": "makan",
+      "complete": true
+   },
+   {
+      "task": "masak",
+      "complete": false
+   },
+   {
+      "task": "tidur lama",
+      "complete": false
+   }
+]
